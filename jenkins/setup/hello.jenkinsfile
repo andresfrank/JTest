@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello from "setup" folder and "test-jenkinsfile" branch'
+                sh '''
+                pwd
+                tree
+                '''
+            }
+        }
+    }
+}
